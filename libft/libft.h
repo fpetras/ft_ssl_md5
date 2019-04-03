@@ -6,12 +6,15 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 08:33:21 by fpetras           #+#    #+#             */
-/*   Updated: 2019/03/27 16:01:29 by fpetras          ###   ########.fr       */
+/*   Updated: 2019/04/03 11:13:48 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# include "ft_printf/ft_printf.h"
+# include "get_next_line/get_next_line.h"
 
 # include <unistd.h>
 # include <stdlib.h>

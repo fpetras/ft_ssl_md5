@@ -6,7 +6,7 @@
 #    By: fpetras <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 08:34:49 by fpetras           #+#    #+#              #
-#    Updated: 2019/03/27 16:00:33 by fpetras          ###   ########.fr        #
+#    Updated: 2019/04/03 13:01:04 by fpetras          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,7 +71,8 @@ CLEAR_LINE = \033[2K\c
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "\nCreating $@"
+	@echo "$(CLEAR_LINE)"
+	@echo "Creating $@"
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 
