@@ -6,7 +6,7 @@
 /*   By: fpetras <fpetras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 13:39:06 by fpetras           #+#    #+#             */
-/*   Updated: 2019/04/01 16:57:24 by fpetras          ###   ########.fr       */
+/*   Updated: 2019/04/03 13:52:51 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,15 @@ static int	parse_hash_options_2(char **av, int i, int j)
 		set_option(av[i][j]);
 	else
 		return (illegal_option(av[i][j], av));
-	if (!ft_strcmp("-s", av[i]))
+	if (av[i][j] == 's' && !av[i][j + 1] && av[i + 1])
 		return (i + 1);
-	else if (!ft_strncmp("-s", av[i], 2) && ft_strlen(av[i]) >= 3)
+	else if (av[i][j] == 's' && av[i][j + 1])
 	{
-		av[i] = &av[i][2];
+		av[i] = &av[i][j + 1];
 		return (i);
 	}
+	else if (av[i][j] == 's')
+		return (argument_missing(av[i][j], av));
 	return (0);
 }
 

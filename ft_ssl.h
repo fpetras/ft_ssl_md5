@@ -6,7 +6,7 @@
 /*   By: fpetras <fpetras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 12:00:22 by fpetras           #+#    #+#             */
-/*   Updated: 2019/04/01 16:45:46 by fpetras          ###   ########.fr       */
+/*   Updated: 2019/04/03 13:55:08 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ int			command_is_hash(char **av);
 int			parse_options(int ac, char **av);
 int			parse_hash_options(int ac, char **av);
 int			illegal_option(char opt, char **av);
+int			argument_missing(char opt, char **av);
 int			print_hash_usage(char **av);
 int			hash(int ac, char **av);
 char		*read_stdin(void);
