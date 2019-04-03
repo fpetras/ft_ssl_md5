@@ -6,7 +6,7 @@
 /*   By: fpetras <fpetras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/07 12:00:22 by fpetras           #+#    #+#             */
-/*   Updated: 2019/04/03 13:55:08 by fpetras          ###   ########.fr       */
+/*   Updated: 2019/04/03 14:24:27 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,26 +31,14 @@
 
 # define HASH_OPT_STR "pqrs"
 
-enum	e_opts
+enum		e_opts
 {
-	OPT_P,
-	OPT_Q,
-	OPT_R,
-	OPT_S,
-	OPT_NUM
+	OPT_P, OPT_Q, OPT_R, OPT_S, OPT_NUM
 };
 
-enum	e_vars
+enum		e_vars
 {
-	A,
-	B,
-	C,
-	D,
-	E,
-	F,
-	G,
-	I,
-	TMP = 4
+	A, B, C, D, E, F, G, I, TMP = 4
 };
 
 char		*g_cmd;
