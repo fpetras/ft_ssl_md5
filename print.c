@@ -12,7 +12,7 @@
 
 #include "ft_ssl.h"
 
-void	print(char *input)
+void	print_input(char *input)
 {
 	size_t i;
 

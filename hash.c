@@ -44,7 +44,7 @@ static int	hash_file(char *filename)
 {
 	char *input;
 
-	if ((input = read_file(filename)) != NULL)
+	if ((input = read_input(filename)) != NULL)
 	{
 		hash_formatted(filename, input);
 		free(input);
@@ -58,9 +58,9 @@ static int	hash_stdin(void)
 {
 	char *input;
 
-	if ((input = read_stdin()) == NULL)
+	if ((input = read_input(NULL)) == NULL)
 		return (EXIT_FAILURE);
-	g_opts[OPT_P] ? print(input) : 0;
+	g_opts[OPT_P] ? print_input(input) : 0;
 	(g_md == 5) ? md5(input) : 0;
 	(g_sha == 224 || g_sha == 256) ? sha224_256(input) : 0;
 	(g_sha == 384 || g_sha == 512 || g_sha == 512224 || g_sha == 512256) ?
