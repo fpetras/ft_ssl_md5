@@ -15,6 +15,12 @@ Built from the ground up using only these functions:
 
 `git clone https://github.com/fpetras/ft_ssl_md5.git && cd ft_ssl_md5 && make`
 
+## Command-line completion
+
+ft_ssl features tab completion for Zsh.
+
+To enable, move `_ft_ssl` into a directory included in `$fpath`, and restart your terminal session.
+
 ## Usage:
 
 ```
