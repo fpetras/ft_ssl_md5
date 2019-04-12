@@ -1,0 +1,24 @@
+#compdef _ft_ssl ft_ssl
+
+function _ft_ssl {
+	local line
+
+	_arguments -C \
+		"1: :(md5 sha224 sha256 sha384 sha512 sha512224 sha512256)" \
+		"*::arg:->args"
+
+	case $line[1] in
+		md5|sha224|sha256|sha384|sha512|sha512224|sha512256)
+			_hash
+		;;
+	esac
+}
+
+function _hash {
+	_arguments -S -s -A "-*" \
+		"-p[echo stdin to stdout and append checksum to stdout]" \
+		"-q[quiet mode]" \
+		"-r[reverse the format of the output]" \
+		"(-p -q -r)-s+[print the sum of the given string]:message" \
+		"*: :_files"
+}
